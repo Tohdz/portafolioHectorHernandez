@@ -12,25 +12,25 @@ import org.springframework.context.support.ResourceBundleMessageSource;
 import org.springframework.web.servlet.LocaleResolver;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
-import org.springframework.web.servlet.il8n.LocaleChangeInterceptor;
-import org.springframework.web.servlet.il8n.SessionLocaleResolver;
+import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
+import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 
 @Configuration
 public class ProjectConfig implements WebMvcConfigurer{
     @Bean
-    public LocaleResolver localeResolver () {
-        var slr = new SessionLocaleResolver ();
-        slr.setDefaultLocale (Locale.getDefault());
-        slr.setLocaleAttributeName ("session.current.locale");
-        slr.setTimeZoneAttributeName ( "session.current.timezone");
-        return slr;
+    public LocaleResolver localeResolver(){
+        var slr = new SessionLocaleResolver();
+        slr.setDefaultLocale(Locale.getDefault());
+        slr.setLocaleAttributeName("session.current.locale");
+        slr.setTimeZoneAttributeName( "session.current.timezone");
+        return slr;
     }
     
     @Bean
-    public LocaleChangeInterceptor localeChangeInterceptor () {
-        var lci = new LocaleChangeInterceptor ();
+    public LocaleChangeInterceptor localeChangeInterceptor(){
+        var lci = new LocaleChangeInterceptor();
         lci.setParamName ("lang");
-        return lci;
+        return lci;
     }
     
     @Override
@@ -39,10 +39,10 @@ public class ProjectConfig implements WebMvcConfigurer{
     }
     
     @Bean ("messageSource")
-    public MessageSource messageSource () {
+    public MessageSource messageSource(){
         ResourceBundleMessageSource messageSource= new ResourceBundleMessageSource ();
         messageSource.setBasenames ( "messages");
         messageSource.setDefaultEncoding("UTF-8");
-        return messageSource;
+        return messageSource;
     }
 }
