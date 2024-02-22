@@ -2,9 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package service;
+package tienda.demo.service;
 
-import domain.categoria;
+import tienda.demo.domain.categoria;
 import java.util.List;
 
 public interface categoriaService {

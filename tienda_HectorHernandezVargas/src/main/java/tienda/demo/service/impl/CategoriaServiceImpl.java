@@ -2,11 +2,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
  */
-package serviceimpl;
+package tienda.demo.service.impl;
 
-import dao.CategoriaDao;
-import domain.categoria;
-import service.categoriaService;
+import tienda.demo.dao.CategoriaDao;
+import tienda.demo.domain.categoria;
+import tienda.demo.service.categoriaService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
